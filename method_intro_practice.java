@@ -1,16 +1,24 @@
 /*
- * fdsjklfdjsklfdjk
+ * This code's purpose is to pracitce using methods.
  */
 public class method_intro_practice {
-	
+/*
+ * This method is used to print other methods.
+ */
 	public static void main(String[] args) {
-		// cool cool
+		//call stateName, stateHairStyle, stateFavoriteFood
 		stateName();
 		stateHairStyle();
 		stateFavoriteFood();
+		
 		System.out.println();
+
+		//call printCircleStats
 		printCircleStats(4);
+		
 		System.out.println();
+
+		//call printMathStuffs
 		printMathStuffs(4, 2);
 
 	}
