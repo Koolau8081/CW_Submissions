@@ -22,7 +22,7 @@ public class Rectangle {
 	}
 
 	//functions
-	public String getshape() {
+	public static String getshape() {
 		return "Rectangle";
 	}
 	
