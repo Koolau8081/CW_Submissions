@@ -5,8 +5,31 @@ public class shapes_main {
 
 	//Circle 1
 	Circle circOne = new Circle(4.0);
-	System.out.print(circOne.getRadius());
 	System.out.println(Circle.getShape());
+	System.out.print(circOne.getRadius());
+	
+	
+	//Cube
+	Cube cubeOne = new Cube(2.0);
+	System.out.println(Cube.getShape());
+	System.out.print(cubeOne.getSide());
+
+	
+	//Semi-Circle
+	Semi_Circle semcircOne = new Semi_Circle(2.0);
+	System.out.println(Semi_Circle.getShape());
+	System.out.println(semcircOne.getRadius()); 
+	
+	
+	//Sphere
+	Sphere sphereOne = new Sphere(3.0);
+	System.out.println(Sphere.getShape());
+	System.out.println(sphereOne.getRadius());
+	
+	//Square
+	Square squareOne = new Square(2.0);
+	System.out.println(Square.getShape());
+	System.out.println(squareOne.getSide());
 	
 	
 	//Rectangle
