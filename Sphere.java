@@ -15,9 +15,9 @@ public class Sphere {
 	
 	//Functions
 	//Declare a radius as a double
-	public String getShape() {
+	public static String getShape() {
 		
-		return("get shape");	
+		return("Sphere");	
 	}
 	
 	
@@ -42,7 +42,7 @@ public class Sphere {
 	
 	
 
-			
+		
 }
 
 
