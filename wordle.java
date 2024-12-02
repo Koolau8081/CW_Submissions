@@ -128,17 +128,17 @@ public class wordle {
 			char char4 = 'X';
 			char char5 = 'X';
 		
-		//if the user gets the word correct
-			if(userC1 == wc1 && userC2 == wc2 && userC3 == wc3 && userC4 == wc4 && userC5 == wc5) {
+	//if the user gets the word correct
+		if(userC1 == wc1 && userC2 == wc2 && userC3 == wc3 && userC4 == wc4 && userC5 == wc5) {
 						
-				userInput = word;
+			userInput = word;
 				
-				guessedCorrect = true;
+			guessedCorrect = true;
 					
-				return "Good job! You got it correct.";
-			}
+			return "Good job! You got it correct.";
+		}
 			
-		//if the user gets a letter correct but not in the right spot in the word
+	//if the user gets a letter correct but not in the right spot in the word
 			
 			if((userC1 != wc1) && (userC1 == wc2 || userC1 == wc3 || userC1 == wc4 || userC1 == wc5)) {
 				
@@ -209,22 +209,22 @@ public class wordle {
 					guessGrammar = "guess";
 				}
 				
-			if(userInput != word && guessCount != 0) {
+		if(userInput != word && guessCount != 0) {
 	
-				return ("You have " + guessCount + " " + guessGrammar + " remaining."+ "\n" + char1 + char2 + char3 + char4 + char5);
+			return ("You have " + guessCount + " " + guessGrammar + " remaining."+ "\n" + char1 + char2 + char3 + char4 + char5);
 	
-			}
+		}
 			
-			else {
+		else {
 				
-				guessedCorrect = true;
+			guessedCorrect = true;
 				
-				return("Correct! Good job.");
+			return("Correct! Good job.");
 			}
 		}
 	
 	
-		//gives back a guess if the player inputs a string longer than 5 characters.
+	//gives back a guess if the player inputs a string longer than 5 characters.
 		else if(userInput.length() > 5 || userInput.length() < 5 ) {
 			
 			//to correct the grammar of guesses if there is only one guess left.
