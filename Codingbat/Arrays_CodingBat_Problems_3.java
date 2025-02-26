@@ -99,3 +99,20 @@ public int[] makeMiddle(int[] nums) {
   return arr;
 }
 
+public int[] plusTwo(int[] a, int[] b) {
+  int[] arr = new int[a.length + b.length];
+  arr[0] = a[0];
+  arr[1] = a[1];
+  arr[2] = b[0];
+  arr[3] = b[1];
+  
+  return arr;
+}
+
+public int[] swapEnds(int[] nums) {
+  int holder = nums[0];
+  nums[0] = nums[nums.length-1];
+  nums[nums.length-1] = holder;
+  return nums;
+}
+
