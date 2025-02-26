@@ -28,3 +28,74 @@ public int[] makeLast(int[] nums) {
   
 }
 
+public boolean double23(int[] nums) {
+ int count2 = 0;
+ int count3 = 0;
+ 
+ boolean is23 = false;
+ 
+  for(int i = 0; i < nums.length; i++){
+    if(nums[i] == 2){
+      count2++;
+    }
+    if(nums[i] == 3){
+      count3++;
+    }
+  }
+  
+  if(count2 >= 2 || count3 >= 2){
+    is23 = true;
+  }
+  
+  return is23;
+}
+
+public int[] fix23(int[] nums) {
+  for(int i = 0; i < nums.length; i++){
+    if(nums[i] == 2 && nums[i+1] == 3){
+      nums[i+1] = 0;
+    }
+  }
+  
+  return nums;
+}
+
+public int start1(int[] a, int[] b) {
+  int count = 0;
+  if(a.length > 0){
+    if(a[0] == 1){
+      count++;
+    }
+  }
+  if(b.length > 0){
+    if(b[0] == 1){
+      count++;
+    }
+  } 
+  return count;
+}
+
+public int[] biggerTwo(int[] a, int[] b) {
+  int sumA;
+  int sumB;
+  
+  sumA = a[0] + a[1];
+  sumB = b[0] + b[1];
+  
+  if(sumA >= sumB){
+    return a;
+  }
+  
+  else{
+    return b;
+  }
+  
+}
+
+public int[] makeMiddle(int[] nums) {
+  int[] arr = new int[2];
+  arr[0] = nums[(nums.length-1) / 2];
+  arr[1] = nums[((nums.length-1) / 2) +1];
+  return arr;
+}
+
