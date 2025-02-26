@@ -116,3 +116,12 @@ public int[] swapEnds(int[] nums) {
   return nums;
 }
 
+public int[] midThree(int[] nums) {
+  int[] arr = new int[3];
+  int midNum = (nums.length + 1) / 2;
+  arr[0] = nums[midNum-2];
+  arr[1] = nums[midNum - 1];
+  arr[2] = nums[midNum];
+  
+  return arr;
+}
