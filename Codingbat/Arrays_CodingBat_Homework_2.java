@@ -45,6 +45,23 @@ public int sum2(int[] nums) {
   return sum;
 }
 
+public int[] middleWay(int[] a, int[] b) {
+  int midA = a[1];
+  int midB = b[1];
+  int[] midArr = {midA, midB};
+  return midArr;
+}
+
+public int[] makeEnds(int[] nums) {
+  int one = nums[0];
+  int last = nums[nums.length-1];
+  int[] newArr = {one, last};
+  return newArr;
+}
+
+
+
+
 
 
 
