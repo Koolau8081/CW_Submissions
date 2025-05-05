@@ -105,11 +105,15 @@ public class ticTacToe {
 		//to switch between X and O for visuals.
 		String mark;
 		
+		String playerString;
+		
 		if(p1Turn == true) {
 			mark = p1;
+			playerString = "PLAYER 1";
 		}
 		else {
 			mark = p2;
+			playerString = "PLAYER 2";
 		}
 		
 		
@@ -180,109 +184,35 @@ public class ticTacToe {
 		printVisual();
 		}
 
-		System.out.println("mark passed to checkWin" + mark);
 		//checks if anyone has won. 
 		checkWin(mark);
 		if(win == true) {
-			System.out.println("yay you won");	
+			
+			System.out.println("\n" + playerString + " has won!!!");	
 			
 		}
+		
 		
 		else {
 			
-		}
-		
-		
-		//To switch from player 1's turn to player 2's. (Switch between X and O)
-		
-		if(invalid == false) {
-			
-			if(p1Turn == true) {
+			//To switch from player 1's turn to player 2's. (Switch between X and O).
+			if(invalid == false) {
 				
-				p1Turn = false;
-				System.out.println("\nPLAYER 2 turn:");
-			}
-			
-			else {
-				
-				p1Turn = true;
-				System.out.println("\nPLAYER 1 turn:");
-			}
-		}	
-		
-		//repeats the method since no one won yet.
-		playerTurn();	
-		
-		
-		
-		
-	}
-	
-	/*
-	 * This method checks if someone has won.
-	 */
-	public static boolean checkWin(String marks) {
-		
-		//to check if middle is involved in win for player 2(X)
-		
-		//to check if 3 marks found
-		int count = 0;
-		int row = 0;
-		int traverse = 0;
-		
-		//to check for win in rows
-		for(int r = 0; r < table.length-1 && traverse == 3; r++) {
-			
-			traverse = 0;
-			count = 0;
-			
-			for(int c = 0; r < table[0].length-1; c++) {
-				
-				if(table[r][c] == marks) {
+				if(p1Turn == true) {
 					
-					count++;
+					p1Turn = false;
+					System.out.println("\nPLAYER 2 turn:");
 				}
 				
-				if(count == 3) {
+				else {
 					
-					win = true;
-					return win;
-				}	
-				
-				traverse++;
-				
-			}
+					p1Turn = true;
+					System.out.println("\nPLAYER 1 turn:");
+				}
+			}	
+			
+			//repeats the method since no one won yet.
+			playerTurn();	
 			
 		}
 		
-		
-		//to check for win in columns
-		for(int c = 0; c < table[0].length-1; c++) {
-			
-			if(table[row][c] == marks) {
-				
-				count++; 
-				
-			}
-			
-			if(count == 3) {
-				win = true;
-				row = 0;
-				return win;
-			}
-			
-			count = 0;
-			row++;
-			
-		}
-		
-		//incase smth goes wrong
-		return win;
-		
-	}
-	
-	
-	
-	
-	
-}
