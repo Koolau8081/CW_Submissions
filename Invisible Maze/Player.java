@@ -1,6 +1,6 @@
 
 public class Player {
-	
+
 	//attributes
 	private int rPos;
 	
@@ -64,5 +64,10 @@ public class Player {
 		
 		return cPos;
 	}
+	
+	
+	
 
+	
+	
 }
