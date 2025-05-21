@@ -1,25 +1,34 @@
 
 public class GameTile {
 
+
 	//attributes
-	private boolean hasPlayer;
+	private boolean hasPlayer = false;
 
-	private boolean isRevealed;
+	private boolean isRevealed = false;
 
-	private boolean isWall;
+	private boolean isWall = false;
 	
 	
 	
 	//constructor
-	public GameTile() {
+	public GameTile(boolean p, boolean r, boolean w) {
 		
-		hasPlayer = false;
+		hasPlayer = p;
 		
-		isRevealed = false;
+		isRevealed = r;
 		
-		isWall = false;
+		isWall = w;
 		
 	}
+	
+	//colors for use
+	static String DEFAULT = "\033[0m";
+	static String RED = "\033[38;5;210m";		
+	static String GREEN = "\033[38;5;156m";
+	static String BLUE = "\033[38;5;117m";	
+
+	
 	
 	
 	//functions
@@ -28,8 +37,27 @@ public class GameTile {
 	 * not sure what this is actually for
 	 */
 	public String toString() {
-
-		return "yes";
+		
+	
+		if(isRevealed) {
+			
+			if(hasPlayer) {
+				
+				return BLUE + " * " + DEFAULT;
+			}
+			
+			if(isWall) {
+				
+				return RED + " # " + DEFAULT;
+			}
+			
+			if(!hasPlayer) {
+				
+				return GREEN + " # " + DEFAULT;
+			}
+		}
+		
+		return DEFAULT + " # ";
 	}
 	
 	/*
@@ -80,5 +108,7 @@ public class GameTile {
 		
 		isWall = status;
 	}
+	
+	
 	
 }
